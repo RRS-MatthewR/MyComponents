@@ -1,0 +1,1981 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.data-table {
+  padding: 80px;
+}
+
+
+.testSwitch {
+  padding: 80px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 230px) 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "main-header main-header"
+  /* ". breadcrumbs" */
+  "nav main";
+}
+
+.main-header {
+  background-color: #F8F8F8;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  grid-area: main-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.logo {
+ width: 15%;
+}
+
+.logo img {
+  width: 100%;
+  padding: 30px;
+}
+
+.user img {
+  width: 100px;
+}
+
+.sidebar {
+  background-color: #112579 !important;
+  grid-area: nav;
+  border-right: 2px solid #000;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 60px 0 0 0;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  height: 100vh;
+  max-width: 240px;
+}
+
+.sidebar a {
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 25px 30px 25px 30px;
+  transition: all 0.8s ease;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.sidebar a:hover, 
+.sidebar .active {
+  background-color: #F8F8F8;
+  color: #000 !important;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.6);
+}
+
+ul.sidebar {
+  padding-left: 0px !important;
+  list-style: none;
+  margin-right: 0px !important;
+}
+
+.sidebar li:hover {
+  cursor: pointer;
+}
+
+.sidebar i {
+  padding-right: 10px;
+}
+
+.fa-caret-down {
+  padding-left: 60%;
+}
+
+.fa-ticket-alt {
+  display: flex;
+  align-items: right;
+}
+
+
+#dropdown a {
+  font-size: 12px;
+  padding: 20px 25px 20px 25px;
+  width: 80%;
+}
+
+
+.breadcrumbs {
+  grid-area: breadcrumbs;
+}
+
+
+.main {
+  background-color: #fff;  
+  grid-area: main;
+  height: 100vh;
+}
+
+
+.ticket-form {
+  margin: 80px;
+  width: 80%;
+}
+
+.form-title {
+  margin-bottom: 40px;
+}
+
+label span {
+  margin-right: 10px;
+}
+
+.kbSearchBarItems {
+  margin-bottom: 40px;
+  background-color: #efefef;
+  border: 1px solid #000;
+  padding: 60px;
+  border-radius: 5px;
+}
+
+.ticket-form .natureContactAndDate {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.ticketFormItems {
+  margin-bottom: 40px;
+  background-color: #efefef;
+  border: 1px solid #000;
+  padding: 60px;
+  border-radius: 5px;
+}
+
+.ticketFormItems input {
+  background-color: #fff;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.ticketFormItems input:hover {
+  background-color: #fff;
+  transition: all ease 0.8s;
+  border: 1px solid #112579;
+}
+
+.ticketFormItems input:focus {
+  background-color: #F9F9F9;
+  border-color: #112579 !important;
+}
+
+.ticketFormItems textarea {
+  background-color: #fff;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.ticketFormItems textarea:hover {
+  background-color: #fff;
+  transition: all ease 0.8s;
+  border: 1px solid #112579;
+}
+
+.ticketFormItems textarea:focus {
+  background-color: #F9F9F9;
+  border-color: #112579 !important;
+}
+
+.ticketFormItems select {
+  border-radius: 5px;
+}
+
+.ticketFormItems .natureContactAndDate {
+  margin-bottom: 40px;
+}
+
+.ticket-form .natureContactAndDate select {
+  padding: 8px 8px;
+  width: 100px;
+}
+
+.ticket-form .item2 {
+  margin-left: 10px;
+}
+
+.ticket-form .item3 input {
+  padding: 8px 8px;
+  width: 150px;
+}
+
+.ticketFormItems .ticketName {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .ticketName .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .companyName {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .companyName .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .siteAddress {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .siteAddress .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .sitePostcode {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .sitePostcode .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .clientName {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .clientName .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .clientEmail {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .clientEmail .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .clientNumber {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .clientNumber .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .createdName {
+  margin-bottom: 35px;
+}
+
+.ticketFormItems .createdName .item1 select {
+  padding: 8px 8px;
+  width: 100px;
+  margin-bottom: 35px;
+}
+
+.ticketFormItems .allocatedBusiness select {
+  padding: 8px 8px;
+  width: 200px;
+  margin-bottom: 35px;
+}
+
+.ticketFormItems .row8 {
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .row9 {
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .ticketResolved {
+  margin-bottom: 40px;
+}
+
+.ticketFormItems .allocatedStaff {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.ticketFormItems .allocatedStaff .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems .additionalNotes textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  font-family: 'Segoe UI';
+}
+
+.ticketFormItems .additionalNotes {
+  margin-bottom: 35px;
+}
+
+.ticketPrioritised {
+  margin-bottom: 35px;
+}
+
+.ticketPrioritised span {
+  margin-right: 10px;
+}
+
+.ticketFormItems .files input {
+  background-color: #efefef!important;
+  border: none !important;
+}
+
+.ticketFormItems .row13 .item2 {
+  flex-grow: 1;
+}
+
+.ticketFormItems #submit {
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  margin-left: 0;
+  width: 50%;
+}
+
+.ticketFormItems #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+.ticketFormItems #reset {
+  padding: 15px 10px;
+  background-color: #555;
+  border: none;
+  border-radius: 0px;
+  border: 1px solid #000;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  margin-right: 0;
+  width: 50%;
+}
+
+.ticketFormItems #reset:hover {
+  background-color: #222;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+.kb-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  width: 80%;
+}
+
+.kb-form #kb-form-title {
+  margin-bottom: 40px;
+}
+
+.kb-form .kb-row1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.kb-form .kb-row1 input {
+  padding: 8px 8px;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.kb-form .kb-row5 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.kb-form .kb-row5 input {
+  padding: 8px 8px;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.kb-form .kb-row2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.kb-form .kb-row2 input {
+  padding: 8px 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.kb-form .kb-row3 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.kb-form .kb-row3 textarea {
+  width: 100%;
+  margin-top: 10px;
+  height: 400px;
+  font-family: 'Segoe UI';
+}
+
+.kb-form .kb-row4 {
+  margin-bottom: 20px;
+}
+
+.kb-form #submit {
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30%;
+}
+
+.kb-form #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.createKBForm {
+  margin: 80px;
+  width: 80%;
+}
+
+.createKBFormItems {
+  margin-bottom: 40px;
+  background-color: #efefef;
+  border: 1px solid #000;
+  padding: 60px;
+  border-radius: 5px;
+}
+
+.createKBFormItems input {
+  background-color: #fff;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.createKBFormItems input:hover {
+  background-color: #fff;
+  transition: all ease 0.8s;
+  border: 1px solid #112579;
+}
+
+.createKBFormItems input:focus {
+  background-color: #F9F9F9;
+  border-color: #112579 !important;
+}
+
+.createKBFormItems textarea {
+  background-color: #fff;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.createKBFormItems textarea:hover {
+  background-color: #fff;
+  transition: all ease 0.8s;
+  border: 1px solid #112579;
+}
+
+.createKBFormItems textarea:focus {
+  background-color: #F9F9F9;
+  border-color: #112579 !important;
+}
+
+.createKBFormItems .row5 input {
+  background-color: #efefef;
+  border: none !important;
+}
+
+.createKBFormTitle {
+  margin-bottom: 40px;
+}
+
+.createKBFormItems .row1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.createKBFormItems .row1 .item2 {
+  flex-grow: 1;
+  margin-right: 5%;
+}
+
+.createKBFormItems .row1 .item4 {
+  flex-grow: 1;
+}
+
+.createKBFormItems .row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.createKBFormItems .row2 .item2 {
+  flex-grow: 1;
+}
+
+.createKBFormItems .row4 textarea {
+  height: 400px;
+  margin-top: 10px;
+  font-family: 'Segoe UI';
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.createKBFormItems #submit{
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  margin-left: 0;
+  width: 45%;
+}
+
+.createKBFormItems #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+
+#tickets {
+  margin: 80px;
+}
+
+#tickets h1 {
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#tickets hr {
+  width: 20%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.createNewBtn {
+  background-color: #112579;
+  color: #fff;
+  padding: 15px 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all ease 0.8s;
+  border-radius: 5px;
+}
+
+.createNewBtn i {
+  padding-left: 10px;
+}
+
+.createNewBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#ticketsTable {
+  margin-top: 30px;
+}
+
+#ticketsTable i {
+  color: #0080FF;
+  font-size: 18px;
+  text-align: center;
+}
+
+#userTable {
+  margin-top: 30px;
+}
+
+#userTable i {
+  color: #f00;
+  font-size: 18px;
+}
+
+.table-menu {
+  background-color: transparent;
+  min-width: 115px;
+  display: flex;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.dashboardTickets {
+  margin: 80px;
+}
+
+.dashboardTickets h1 {
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.dashboardTickets hr {
+  width: 20%;
+  text-align: left;
+}
+
+.dashboardTicketsRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dashboardTicketsRow div {
+  min-width: 160px;
+}
+
+.dashboardTickets h2 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.rr-dashboard-col {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.rr-dashboard-col span {
+  background-color: #E02C2C;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.agile-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.agile-dashboard-col span {
+  background-color: #01285C;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.stratus-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.stratus-dashboard-col span {
+  background-color: #488ECC;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.tcs-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.tcs-dashboard-col span {
+  background-color: #722B71;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.unitygtm-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.unitygtm-dashboard-col span {
+  background-color: #000;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.qnet-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.qnet-dashboard-col span {
+  background-color:#EC7034;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.brunel-dashboard-col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.brunel-dashboard-col span {
+  background-color: #722B71;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.viewTicketsbtn {
+  background-color: #F8F8F8;
+  color: #000;
+  cursor: pointer;
+  padding: 8px 4px;
+  border: 1px solid #000;
+  align-items: center;
+  font-family: 'Segoe UI';
+  transition: all ease 0.6s;
+  font-size: 12px;
+}
+
+.viewTicketsbtn:hover {
+  background-color: #E4E4E4;
+}
+
+.completedTickets {
+  margin: 80px;
+}
+
+.completedTickets h1 {
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.completedTickets hr {
+  width: 20%;
+}
+
+.completedTicketsRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.completedTableMenu,
+.MuiListItemText-root {
+  font-size: 20px;
+}
+
+
+.submittedKBForm {
+  margin: 80px;
+  width: 60%;
+}
+
+.submittedKBFormTitle {
+  margin-bottom: 40px;
+}
+
+.knowledgeBaseOutput {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.submittedBFormItems {
+  background-color: #efefef;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.submittedBFormItems .row1 {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.submittedBFormItems .row2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  width: 100% !important;
+}
+
+.submittedBFormItems .row3 {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.submittedBFormItems .row4 {
+}
+
+.submittedBFormItems #submit {
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  width: 50%;
+}
+
+.submittedBFormItems #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.editableKBForm {
+  margin: 80px;
+  width: 65%;
+}
+
+.editableKBFormTitle {
+  margin-bottom: 40px;
+}
+
+.editableKBFormItems input {
+  padding: 10px 10px;
+}
+
+.editableKBFormItems .row1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.editableKBFormItems .row1 .item2 {
+  flex-grow: 1;
+  margin-right: 5%;
+}
+
+.editableKBFormItems .row1 .item4 {
+  flex-grow: 1;
+}
+
+.editableKBFormItems .row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.editableKBFormItems .row2 .item2 {
+  flex-grow: 1;
+}
+
+.editableKBFormItems  .row4 textarea {
+  height: 400px;
+  margin-top: 10px;
+  font-family: 'Segoe UI';
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.editableKBFormItems #submit{
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  margin-left: 0;
+  width: 45%;
+}
+
+.editableKBFormItems #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+.editableKBFormItems input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  padding: 8px 8px;
+}
+
+.editableKBFormItems input:hover {
+  background-color: #FBFBFB;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  transition: all ease 0.8s;
+}
+
+.editableKBFormItems input:focus {
+  background-color: #efefef;
+  color: #000;
+  border: 1px solid #e4e4e4;
+}
+
+.editableKBFormItems textarea {
+  outline: none;
+  border: 1px solid #e4e4e4;
+  font-size: 15px;
+  color: #000;
+}
+
+.editableKBFormItems textarea:hover {
+  background-color: #FBFBFB;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  transition: all ease 0.8s;
+}
+
+.editableKBFormItems textarea:focus {
+  background-color: #efefef;
+  color: #000;
+  border: 1px solid #e4e4e4;
+}
+
+.editableKBFormItems .row5 {
+  margin-bottom: 40px;
+}
+
+
+
+#submittedForm {
+  margin: 80px;
+  width: 75%;
+}
+
+.submittedTicketItems {
+  background-color: #efefef;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+#submittedForm span {
+  display: inline-block;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.submittedTicketOutput {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.submittedForm-title {
+  margin-bottom: 40px;
+  
+}
+
+#submittedForm .row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+#submittedForm .item2 {
+  margin-left: 10px;
+}
+
+#submittedForm .row2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#submittedForm .row3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+#submittedForm .row4 {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+#submittedForm .row5 {
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+#submittedForm .row6 {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+#submittedForm .row7 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+#submittedForm .row7 {
+  margin-bottom: 10px;
+}
+
+#submittedForm .row8 {
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+#submittedForm .row9 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+#companies {
+  margin: 80px;
+}
+
+#companies h1 {
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#companies hr {
+  width: 20%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+#companiesTable {
+  margin-top: 30px;
+}
+
+.addCompanyRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.addCompany {
+  flex-grow: 1;
+}
+
+.createCompanyBtn {
+  background-color: #112579;
+  color: #fff;
+  padding: 15px 15px;
+  border: 1px solid rgb(77, 74, 74);
+  cursor: pointer;
+  transition: all ease 0.8s;
+  border-radius: 5px;
+}
+
+.createCompanyBtn:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+.uploadCompanyRowBtn {
+  display: flex;
+  flex-direction: row;
+}
+
+.uploadNewBtn {
+  background-color: #112579;
+  color: #fff;
+  padding: 15px 25px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all ease 0.8s;
+  border-radius: 5px;
+}
+
+.uploadNewBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+
+
+
+.createCompanyForm {
+  margin: 80px;
+  width: 80%;
+}
+
+.createCompanyForm input {
+  background-color: #fff;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.createCompanyForm select {
+  border-radius: 5px;
+}
+
+.createCompanyForm input:hover {
+  background-color: #fff;
+  transition: all ease 0.8s;
+  border: 1px solid #112579;
+}
+
+.createCompanyForm input:focus {
+  background-color: #F9F9F9;
+  border-color: #112579 !important;
+}
+
+
+.companyFormItems {
+  margin-bottom: 40px;
+  background-color: #efefef;
+  border: 1px solid #000;
+  padding: 60px;
+  border-radius: 5px;
+}
+
+.nameAndBusiness {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.nameAndBusiness .item2 {
+  flex-grow: 1;
+  margin-right: 5%;
+}
+
+
+.nameAndBusiness select {
+  padding: 8px 8px;
+}
+
+.nameAndBusiness .item4 {
+  margin-right: 5%;
+}
+
+.regAndSLA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.regAndSLA input {
+  width: 30%;
+}
+
+.companyAddress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.companyAddress .item2 {
+  flex-grow: 1;
+}
+
+.row3 {
+  margin-bottom: 40px !important;
+}
+
+.row3 .item1 {
+  width: 80%;
+}
+
+.mtContactName {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.mtContactName .item2 {
+  flex-grow: 1;
+}
+
+
+.mtContactNumber {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.mtContactNumber .item2 {
+  flex-grow: 1;
+}
+
+
+
+.mtContactEmail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.mtContactEmail .item2 {
+  flex-grow: 1;
+}
+
+.faContactName {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.faContactName .item2 {
+  flex-grow: 1;
+}
+
+.faContactNumber {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.faContactNumber .item2 {
+  flex-grow: 1;
+}
+
+.faContactEmail  {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.faContactEmail .item2 {
+  flex-grow: 1;
+}
+
+
+.addAddressBtn {
+  background-color: #112579;
+  color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all ease 0.8s;
+  border-radius: 5px;
+}
+
+.addAddressBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.removeAddressBtn {
+  background-color: #112579;
+  color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all ease 0.8s;
+  border-radius: 5px;
+}
+
+.removeAddressBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.formButtons #submit {
+  background-color: #112579;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 15px 55px;
+  border-radius: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.formButtons #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  transition: all ease 0.8s;
+}
+
+.formButtons #reset {
+  background-color: #F8F8F8;
+  color: #000;
+  border: 1px solid #000;
+  padding: 15px 55px;
+  border-radius: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.formButtons #reset:hover {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+  transition: all ease 0.8s;
+}
+
+
+
+.kb-editableForm input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  padding: 8px 8px;
+}
+
+.kb-editableForm input:hover {
+  background-color: #FBFBFB;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  transition: all ease 0.8s;
+}
+
+.kb-editableForm input:focus {
+  background-color: #efefef;
+  color: #000;
+  border: 1px solid #e4e4e4;
+}
+
+
+
+
+
+
+.tickets-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.editable-ticket-form {
+  margin: 80px;
+  width: 80%;
+}
+
+.form-title h1 {
+  font-family: 'Segoe Ui', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.form-title hr {
+  width: 35%;
+}
+
+label span {
+  margin-right: 10px;
+  font-weight: 300;
+}
+
+.editable-ticket-form .natureContactAndDate {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editable-ticket-form select {
+  padding: 8px 8px;
+  width: 100px;
+}
+
+.editable-ticket-form .ticketName {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.editable-ticket-form .ticketName .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .companyName {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.editable-ticket-form .companyName .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .siteAddress {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editable-ticket-form .siteAddress .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .sitePostcode {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editable-ticket-form .sitePostcode .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .clientName {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editable-ticket-form .clientName .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .clientEmail {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.editable-ticket-form .clientEmail .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .clientNumber {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.editable-ticket-form .clientNumber .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .createdName {
+  margin-bottom: 20px;
+}
+
+.editable-ticket-form .createdName select {
+  padding: 8px 8px;
+  width: 100px;
+}
+
+.editable-ticket-form .allocatedBusiness {
+  margin-bottom: 20px;
+}
+
+.editable-ticket-form .allocatedBusiness select {
+  padding: 8px 8px;
+  width: 200px;
+}
+
+.editable-ticket-form .row9 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.editable-ticket-form .allocatedStaff {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.editable-ticket-form .allocatedStaff .item2 {
+  flex-grow: 1;
+}
+
+.editable-ticket-form .additionalNotes textarea {
+  height: 150px;
+  margin-top: 10px;
+  font-family: 'Segoe UI';
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.editable-ticket-form input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  padding: 8px 8px;
+}
+
+.editable-ticket-form input:hover {
+  background-color: #FBFBFB;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  transition: all ease 0.8s;
+}
+
+.editable-ticket-form input:focus {
+  background-color: #efefef;
+  color: #000;
+  border: 1px solid #e4e4e4;
+}
+
+
+.editable-ticket-form textarea {
+  outline: none;
+  border: 1px solid #e4e4e4;
+  font-size: 15px;
+  color: #000;
+}
+
+.editable-ticket-form textarea:hover {
+  background-color: #FBFBFB;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  transition: all ease 0.8s;
+}
+
+.editable-ticket-form textarea:focus {
+  background-color: #efefef;
+  color: #000;
+  border: 1px solid #e4e4e4;
+}
+
+
+
+
+
+
+.submittedCompanyForm {
+  margin: 80px;
+  width: 70%;
+}
+
+.submittedCompanyOutput {
+  margin-right: 10px;
+  font-weight: 300;
+}
+
+.submittedCompanyFormItems {
+  background-color: #efefef;
+  padding: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.submittedCompanyFormItems .nameAndBusiness {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submittedCompanyFormItems .nameAndBusiness .item2{
+  flex-grow: 1;
+}
+
+
+.submittedCompanyFormItems .row2 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.submittedCompanyFormItems .row3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.submittedCompanyFormItems .row3 .item1 {
+  flex-grow: 1;
+}
+
+.submittedCompanyFormItems .row4 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.submittedCompanyFormItems .row5 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.submittedCompanyFormItems .row5 .item1 {
+  flex-grow: 1;
+}
+
+.submittedCompanyFormItems .row6 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.submittedCompanyFormItems .row7 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.submittedCompanyFormItems .row8 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.submittedCompanyFormItems .row9 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.submittedCompanyFormItems .row10 {
+  margin-top: 25px;
+}
+
+
+
+
+
+
+.editableCompanyForm {
+  margin: 80px;
+  width: 75%;
+}
+
+.editableCompanyForm input {
+  padding: 10px 10px;
+}
+
+.editableFormItems {
+  margin-bottom: 40px;
+
+}
+
+.editableFormItems input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  padding: 8px 8px;
+}
+
+.editableFormItems input:hover {
+  background-color: #FBFBFB;
+  color: #000;
+  border: 1px solid #e4e4e4;
+  transition: all ease 0.8s;
+}
+
+.editableFormItems input:focus {
+  background-color: #efefef;
+  color: #000;
+  border: 1px solid #e4e4e4;
+}
+
+.editableFormItems #submit {
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 40px;
+}
+
+.editableFormItems #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.editableFormItems #reset {
+  padding: 15px 10px;
+  background-color: #555;
+  border: none;
+  border-radius: 0px;
+  border: 1px solid #000;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  margin-right: 0;
+  width: 30%;
+}
+
+
+.submittedKBOutput {
+  margin-bottom: 10px;
+}
+
+
+.submittedKBFormItems #submit {
+  padding: 15px 10px;
+  background-color: #112579;
+  border: 1px solid #112579;
+  border-radius: 0px;
+  color: #fff;
+  transition: all 0.8s ease;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30%;
+}
+
+.submittedKBFormItems #submit:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.createTicketForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.kbSearchBar {
+  margin-top: 80px;
+}
+
+.searchLabel {
+  display: flex;
+}
+
+.kbsearchBarTitle {
+  margin-bottom: 40px;
+}
+
+.searchLabel input {
+  padding: 10px 10px;
+  flex-grow: 1;
+}
+
+.searchLabel i {
+  background-color: #112579;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  transition: all ease 0.8s;
+}
+
+.searchLabel i:hover {
+  background-color: #0C1A53;
+  color: #fff;
+  padding: 12px;
+}
+
+
+
+
+
+
+.stopwatch {
+  background-color: #01285c;
+  margin: 0 auto;
+  width: 300px;
+  height: 250px;
+  position: relative;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 32px;
+}
+
+.stopwatch-card {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 325px;
+  height: 170px;
+  top: 142px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stopwatch button {
+  outline: none;
+  background: transparent;
+  padding: 15px 10px;
+  border: 1px solid #112579;
+  background-color: #01285c;
+  color: #fff;
+  min-width: 150px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 200px;
+  margin: 0 auto;
+  margin-top: 0px;
+}
